@@ -1,0 +1,168 @@
+* {
+  font-family: "Kanit", sans-serif;
+}
+
+.NavBar {
+  width: 100%;
+  height: 15mm;
+  background-color: #fff;
+  box-shadow: 1px 1px 12px 5px rgba(0, 0, 0, .1);
+  color: black;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 0;
+}
+
+.App-header {
+  background-color: #EEEEEE;
+  min-height: 100vh;
+
+}
+
+.NavText {
+  margin: 5px;
+  margin-left: 20%;
+}
+
+.Content {
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 12px 5px rgba(0, 0, 0, .1);
+  border-radius: 9px;
+  width: 60%;
+  height: 14cm;
+  margin-left: 20%;
+  margin-top: 1cm;
+  position: inherit;
+}
+
+.WaterLevel {
+  width: 100%;
+  height: 37%;
+  background-color: #A8E05F;
+  display: flex;
+}
+
+.Level {
+  width: 20%;
+  height: 60%;
+  background-color: #87C13C;
+  margin-left: 10%;
+  text-align: center;
+  border-radius: 9px;
+  color: white;
+  margin-top: 8mm;
+}
+
+#levestxt {
+  display: contents;
+  font-size: 20px;
+
+}
+
+.WaterInfo {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+
+.footer {
+  text-align: center;
+  background-color: #111111;
+  color: #A5DC86;
+}
+
+span {
+
+  color: #fff;
+}
+
+#ChartContent {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1cm;
+}
+
+/* For smaller screens */
+@media (min-width: 200px) {
+  #ChartContent {
+    height: 3cm;
+  }
+}
+
+@media (min-width: 300px) {
+  #ChartContent, #PrototypeBox  {
+    height: 4cm;
+  }
+}
+
+@media (min-width: 500px) {
+  #ChartContent, #PrototypeBox  {
+    height: 5cm;
+  }
+}
+
+@media (min-width: 600px) {
+  #ChartContent, #PrototypeBox  {
+    height: 6cm;
+  }
+}
+
+/* For medium-sized screens */
+@media (max-width: 800px) {
+  .Content {
+    width: 90%;
+    /* 80% of the viewport width */
+    margin-left: 5%;
+    /* Centering content */
+  }
+
+  #ChartContent, #PrototypeBox  {
+    height: 8cm;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 1300px) {
+  #ChartContent, #PrototypeBox  {
+    height: 11cm;
+  }
+}
+
+@media (min-width: 1600px) {
+  #ChartContent, #PrototypeBox  {
+    height: 13cm;
+  }
+}
+
+@media (min-width: 1700px) {
+  #ChartContent, #PrototypeBox  {
+    height: 15cm;
+  }
+}
+
+/* info */
+#PrototypeBox {
+  display: flex;
+  margin-bottom: 1cm;
+}
+
+.QuarterImage {
+  flex: 1;
+  max-width: 50%;
+  height: 80%;
+  margin: 4%;
+}
+
+.InformationText {
+  flex: 1; 
+  padding: 0 1rem;
+  margin-top: 3%;
+  overflow: auto;
+  font-size: 15px;
+}
+
+#info{
+  color: #000;
+  font-size: 20px;
+}

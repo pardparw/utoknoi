@@ -1,0 +1,47 @@
+.forecast {
+  height: 7cm;
+  overflow-y: auto;
+
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.box {
+  background-color: #a8e05f;
+  width: 25%;
+}
+
+.status {
+  color: #717171;
+}
+
+.levelinfo {
+  color: white;
+}
+
+.ChartContainer {
+  width: 100%; /* Take up 50% of the content width */
+  
+  /* height: 4cm; */
+}
+
+
+
