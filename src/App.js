@@ -221,7 +221,7 @@ function App() {
         <img src={Prototype} alt="Prototype" className="QuarterImage" />
         <div className="InformationText">
           <span id="info">
-            รายเอียดโครงงาน
+            รายละเอียดโครงงาน
             <br />
             วัสดุ/อุปกรณ์ที่เลือกใช้
           </span>
