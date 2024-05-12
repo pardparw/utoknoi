@@ -172,7 +172,7 @@ function App() {
         >
           <div class="aqi-value-wrapper">
             <div className="aqi-value" style={{ backgroundColor: bgColor }}>
-              <p className="aqi-value__unit"> ระดับน้า (เมตร)</p>
+              <p className="aqi-value__unit"> ระดับน้า x 10 (เมตร)</p>
               <p className="aqi-value__value">{value}</p>
             </div>
             <p className="aqi-status">
