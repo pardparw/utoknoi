@@ -31,7 +31,7 @@ function App() {
   const [csvData, setCsvData] = useState([]);
   const fetchCSVData = () => {
     const csvUrl =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4Mh60vjpy57ya-acQoV41RA2JcZyYLg0FVU6XiUF7EduONzxmPwY5yT75JGUCe7y8Q3YdziWwqtUM/pub?output=csv"; // Replace with your Google Sheets CSV file URL
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGRj0ew5iSnDnRhyKp1sDTgFvYT_K5HMWp2n69Ot6TPqmbQ1epbQHHuOHXRmhqNMm3YHvg301topnf/pub?gid=0&single=true&output=csv"; // Replace with your Google Sheets CSV file URL
     axios
       .get(csvUrl)
       .then((response) => {
@@ -81,13 +81,13 @@ function App() {
 
       // Determine status based on water level
       let currentLevel = parseInt(data[i]["Water"]);
-      if (currentLevel <= 10) {
+      if (currentLevel <= 1) {
         Status.push("ปลอดภัย");
         Color = "#87c13c";
-      } else if (currentLevel <= 20) {
+      } else if (currentLevel <= 2) {
         Status.push("ควรระวัง");
         Color = "#fdd64b";
-      } else if (currentLevel <= 30) {
+      } else if (currentLevel <= 3) {
         Status.push("เสี่ยง");
         Color = "#ff9b57";
       } else {
@@ -134,17 +134,17 @@ function App() {
 
   useEffect(() => {
     // Check the value and set the color accordingly
-    if (value <= 10) {
+    if (value <= 1) {
       setTextinfo("ปลอดภัย");
 
       setColor("#87c13c");
       setColor2("#a8e05f");
-    } else if (value <= 20 && value > 10) {
+    } else if (value <= 2 && value > 1) {
       setTextinfo("ควรระวัง");
 
       setColor("#fdd64b");
       setColor2("#efbe1d");
-    } else if (value <= 30 && value > 20) {
+    } else if (value <= 3 && value > 2) {
       setTextinfo("เสี่ยง");
 
       setColor("#ff9b57");
