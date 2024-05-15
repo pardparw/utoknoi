@@ -23,6 +23,7 @@
 .NavText {
   margin: 5px;
   margin-left: 20%;
+  cursor: pointer;
 }
 
 .Content {
