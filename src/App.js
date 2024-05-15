@@ -163,7 +163,7 @@ function App() {
         Loading&#8230;
       </div>
       <div className="NavBar">
-        <h1 className="NavText">U TOK NOI</h1>
+        <h1 className="NavText" onClick={() => {window.location.href = "https://utok-noi.vercel.app/"}} >U TOK NOI</h1>
       </div>
       <div className="Content">
         <div
