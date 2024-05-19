@@ -38,7 +38,7 @@ function App() {
         const parsedCsvData = parseCSV(response.data);
         setCsvData(parsedCsvData);
 
-        const newValue = parseInt(
+        const newValue = parseFloat(
           parsedCsvData[parsedCsvData.length - 1]["Water"]
         );
 
@@ -74,20 +74,20 @@ function App() {
     // Assuming data is an array of objects
 
     // Loop through the data array
-    setValue(parseInt(data[data.length - 1]["Water"]));
+    setValue(parseFloat(data[data.length - 1]["Water"]));
     for (let i = data.length - 1; i >= Math.max(0, data.length - 7); i--) {
-      level.push(parseInt(data[i]["Water"]));
+      level.push(parseFloat(data[i]["Water"]));
       Time.push(data[i]["Time"]);
 
       // Determine status based on water level
-      let currentLevel = parseInt(data[i]["Water"]);
-      if (currentLevel <= 1) {
+      let currentLevel = parseFloat(data[i]["Water"]);
+      if (Math.floor(currentLevel) <= 1) {
         Status.push("ปลอดภัย");
         Color = "#87c13c";
-      } else if (currentLevel <= 2) {
+      } else if (Math.floor(currentLevel) <= 2) {
         Status.push("ควรระวัง");
         Color = "#fdd64b";
-      } else if (currentLevel <= 3) {
+      } else if (Math.floor(currentLevel) <= 3) {
         Status.push("เสี่ยง");
         Color = "#ff9b57";
       } else {
@@ -134,17 +134,17 @@ function App() {
 
   useEffect(() => {
     // Check the value and set the color accordingly
-    if (value <= 1) {
+    if (Math.floor(value) <= 1) {
       setTextinfo("ปลอดภัย");
 
       setColor("#87c13c");
       setColor2("#a8e05f");
-    } else if (value <= 2 && value > 1) {
+    } else if (Math.floor(value) <= 2 && Math.floor(value) > 1) {
       setTextinfo("ควรระวัง");
 
       setColor("#fdd64b");
       setColor2("#efbe1d");
-    } else if (value <= 3 && value > 2) {
+    } else if (Math.floor(value) <= 3 && Math.floor(value) > 2) {
       setTextinfo("เสี่ยง");
 
       setColor("#ff9b57");
@@ -170,7 +170,7 @@ function App() {
           className="aqi-overview__summary"
           style={{ backgroundColor: bgColor2 }}
         >
-          <div class="aqi-value-wrapper">
+          <div className="aqi-value-wrapper">
             <div className="aqi-value" style={{ backgroundColor: bgColor }}>
               <p className="aqi-value__unit"> ระดับน้า x 10 (เมตร)</p>
               <p className="aqi-value__value">{value}</p>
@@ -184,7 +184,7 @@ function App() {
         </div>
         <p1 className="more-txt">เพิ่มเติม</p1>
         <div className="more-box">
-          <p1 className="info-txt">ระดับน้ำย้อนหลัง 7 วัน</p1>
+          <p1 className="info-txt">ระดับน้ำล่วงหน้า 7 วัน</p1>
         </div>
 
         <div className="forecast">
