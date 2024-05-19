@@ -31,7 +31,7 @@ function App() {
   const [csvData, setCsvData] = useState([]);
   const fetchCSVData = () => {
     const csvUrl =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGRj0ew5iSnDnRhyKp1sDTgFvYT_K5HMWp2n69Ot6TPqmbQ1epbQHHuOHXRmhqNMm3YHvg301topnf/pub?gid=0&single=true&output=csv"; // Replace with your Google Sheets CSV file URL
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vQJn2O1JWt797FqYWW5TJmU0uPB3ustW4pTvzrFtyheKZ0PyTn4-JTU--npjXIUdtLiITcTmgs_tyBB/pub?output=csv"; // Replace with your Google Sheets CSV file URL
     axios
       .get(csvUrl)
       .then((response) => {
